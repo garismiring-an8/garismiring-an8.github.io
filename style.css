@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    color: #3D3D3D;
+}
+table td {
+    text-align: center;
+}
+table td.name {
+    text-align: left;
+    cursor: pointer;
+}
+table.tablesorter {
+    background-color: #CDCDCD;
+    font-size: 11px;
+    width: 100%;
+    text-align: left;
+    border-spacing: 1px;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 4px;
+    text-align: center;
+}
+table.tablesorter thead tr .header {
+    padding-right: 9px;
+    background: #e6EEEE url(bg.gif) center right no-repeat;
+    cursor: pointer;
+}
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+table.tablesorter tbody tr:hover td {
+    background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+.filterDiv {
+    background: white;
+    padding: 5px 0 5px 0;
+}
+.filterDiv.fixed {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 5px 5px #CDCDCD;
+}
+.goTop {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    background: url("arrow_up.png") center no-repeat;
+    display: none;
+    opacity: 0.75;
+}
+.filterDiv.fixed .goTop {
+    display: block;
+}
+.goTop:hover {
+    opacity: 0.6;
+}
+tr.hidden {
+    display: none;
+}
+.fixed {
+    top: 0;
+    position: fixed;
+}
+.size::after {
+    content: 'M';
+}
+.copy {
+    padding: 20px;
+    font-size: 12px;
+
+}
