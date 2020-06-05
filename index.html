@@ -1,239 +1,54 @@
+<html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-     <link rel="shortcut icon" href="http://terrificsubs.github.io/favicon.png">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="{\an8} Daftar Proyek">
-    <meta name="keywords" content="TerrificSubs, ExaSubs,\an8, {\an8}">
-    <meta name="robots" content="noarchive, nofollow, nosnippet">
-    <link rel="stylesheet" media="all" type="text/css" href="style.css">
-    <title>{\an8} Daftar Proyek</title>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-19947392-3', 'leopard-raws.org');
-        ga('send', 'pageview');
-    </script>
-    <script type="text/javascript">
-        var offset = 0;
-        function setFilterOffset(){
-            offset = $(".filterDiv").offset();
+<head>
+    <title>{\an8}</title>
+    <style>
+        body {
+            margin: 0;
         }
-        $(document).ready(function(){
-            var filterDiv = $(".filterDiv");
-            $(".name").bind("click", function(){
-                var kode_unduh = $(this).parent().attr("kode").substr(2);
-                window.prompt("Nih, gua kasih tautan unduhnya","https://drive.google.com/file/d/" + kode_unduh);
-            });
-            $("#filterApply").bind("click", function(){
-                applyFilter();
-            });
-            $("#filterInput").bind("keyup", function(event){
-                if(event.keyCode == 13){
-                    $("#filterApply").click();
-                }
-            });
-            if (!("ontouchstart" in window)){
-                $(function(){
-                    setFilterOffset();
-                    var fixed = false;
-                    $(window).scroll(function(){
-                        if ($(window).scrollTop() > offset.top){
-                            if (!fixed){
-                                filterDiv.addClass("fixed");
-                                fixed = true;
-                            }
-                        }
-                        else if (fixed){
-                            filterDiv.removeClass("fixed");
-                            fixed = false;
-                        }
-                    });
-                    $(window).trigger("scroll");
-//                    $("#xdcc-list").tablesorter({sortList: [[1,0]]});
-                    $("#xdcc-list").tablesorter();
-                });
-            }
-        });
-        function applyFilter(){
-            var str = $("#filterInput").val();
-            var searchString = str.replace(/[^ a-zA-Z0-9]/g, "").replace(/ +/g, ".*");
-            var totalEntries = 0;
-            var totalEntriesEl = $("#totalEntries");
-            var strIsEmpty = str.length == 0;
-            $(".name").each(function(i, item){
-                var jitem  = $(item);
-                var parent = jitem.parent();
-                if (strIsEmpty || jitem.html().search(new RegExp(searchString, "gi")) >= 0){
-                    parent.removeClass('hidden');
-                    totalEntries++;
-                }
-                else {
-                    parent.addClass('hidden');
-                }
-            });
-            totalEntriesEl.html(totalEntries);
+
+        canvas {
+            display: block;
         }
-    </script>
+    </style>
 </head>
+
 <body>
-<div style="font-size: 30px;">
-    <img src="You.jpg" alt="nya" height="300"><br>{\an8} Daftar Proyek<div style="font-size: 18px;">"Aku tahu kalian suka yang cepat-cepat, 'kan?"<br></div>
-</div>
-<div style="display: inline-block; width: 900px;">
-<div style="height: 50px;">
-    <div class="filterDiv" style="width: 900px;">
-        <a class="goTop" href="#"></a>
-        <label>Saring: <input type="text" id="filterInput" value=""></label> <input type="button" id="filterApply" value="Terapkan">
-        <div style="font-size: 10px;"><span id="totalEntries">Gunakan penyaring di atas untuk menyaring rilisan di sini</span></div>
+    <div style="display:flex;width:100%;height:100%;position:absolute;color:#f0db4f;justify-content:center;align-items:center">
+
+
     </div>
-</div>
-            <table id="xdcc-list" class="tablesorter">
-                <thead>
-                    <tr>
-        <th class="header">#</th>
-        <th class="header">Nama Berkas</th>
-        <th style="width: 50px;" class="header">Ukuran</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-        
-    
-
- 
-    
- 
-    
-
-    
- 
-    
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- <tr kode="..1H1sUbL7bvtDd4KiW0slNZX05J92R0xcE" class="">
-            <td>1</td>
-            <td class="name">[GarisMiring-an8] Tada-kun wa Koi wo Shinai - 01 [720p-AAC][81F18337][Pre-Air].mkv
-</td>
-            <td class="size">171</td>
-        </tr>
-    
- <tr kode="..1TDr31FCdEfAb4uql79EgamGJctVgfVoN" class="">
-            <td>2</td>
-            <td class="name">[GarisMiring-an8] Tada-kun wa Koi wo Shinai - 01 [TV][480p-AAC][b524fb2e].mkv
-</td>
-            <td class="size">96</td>
-        </tr>
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    
- 
-    <!--Posting-->
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
 
+        var geometry = new THREE.PlaneGeometry(6, 6, 32);
+
+        var texture = new THREE.TextureLoader().load('an8.png');
 
 
+        var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
+        var plane = new THREE.Mesh(geometry, material);
+        scene.add(plane);
 
+        camera.position.z = 20;
 
+        var animate = function () {
+            requestAnimationFrame(animate);
 
+            plane.rotation.y += 0.03;
 
+            renderer.render(scene, camera);
+        };
 
+        animate();
+    </script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-                    </tbody>
-            </table>
-</div>
-<div class="copy">{\an8} Daftar Proyek © 2017 Padang Perwira Yudha</div>
-
-
-
-
-</body></html>
+</html>
